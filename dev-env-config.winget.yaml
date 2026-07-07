@@ -1,0 +1,96 @@
+# Winget configuration for a fresh Windows developer environment.
+# Save this file as dev-env-config.winget.yaml and run:
+#   winget configure --file .\dev-env-config.winget.yaml
+
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-powershell
+      directives:
+        description: Install PowerShell
+        allowPrereleases: false
+      settings:
+        id: Microsoft.PowerShell
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-git
+      directives:
+        description: Install Git
+        allowPrereleases: false
+      settings:
+        id: Git.Git
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-nvm-for-windows
+      directives:
+        description: Install nvm for Windows
+        allowPrereleases: false
+      settings:
+        id: CoreyButler.NVMforWindows
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-dotnet-sdk
+      directives:
+        description: Install the .NET SDK
+        allowPrereleases: false
+      settings:
+        id: Microsoft.DotNet.SDK.8
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-vcpp-redistributable
+      directives:
+        description: Install the Visual C++ Redistributable required by Visual Studio components
+        allowPrereleases: false
+      settings:
+        id: Microsoft.VCRedist.2015+.x64
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-vscode
+      directives:
+        description: Install Visual Studio Code
+        allowPrereleases: false
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-visual-studio
+      directives:
+        description: Install Visual Studio 2022 Community
+        allowPrereleases: false
+      settings:
+        id: Microsoft.VisualStudio.2022.Community
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-neovim
+      directives:
+        description: Install Neovim
+        allowPrereleases: false
+      settings:
+        id: Neovim.Neovim
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-python
+      directives:
+        description: Install Python 3.12
+        allowPrereleases: false
+      settings:
+        id: Python.Python.3.12
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-notepad-plus-plus
+      directives:
+        description: Install Notepad++
+        allowPrereleases: false
+      settings:
+        id: Notepad++.Notepad++
+        source: winget
