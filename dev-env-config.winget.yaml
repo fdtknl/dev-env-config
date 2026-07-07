@@ -1,4 +1,5 @@
 # Winget configuration for a fresh Windows developer environment.
+# This file uses long-term supported (LTS) package choices where the package ecosystem exposes them.
 # Save this file as dev-env-config.winget.yaml and run:
 #   winget configure --file .\dev-env-config.winget.yaml
 
@@ -13,6 +14,7 @@ properties:
       settings:
         id: Microsoft.PowerShell
         source: winget
+        version: "7.4.7"
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: install-git
@@ -40,6 +42,7 @@ properties:
       settings:
         id: Microsoft.DotNet.SDK.8
         source: winget
+        version: "8.0.100"
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: install-vcpp-redistributable
@@ -75,6 +78,24 @@ properties:
         allowPrereleases: false
       settings:
         id: Neovim.Neovim
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-docker-cli
+      directives:
+        description: Install Docker CLI
+        allowPrereleases: false
+      settings:
+        id: Docker.DockerCLI
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-docker-desktop
+      directives:
+        description: Install Docker Desktop
+        allowPrereleases: false
+      settings:
+        id: Docker.DockerDesktop
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage

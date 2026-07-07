@@ -28,6 +28,8 @@ The configuration installs the following in a dependency-safe order:
 - Visual Studio Code
 - Visual Studio 2022 Community
 - Neovim
+- Docker CLI
+- Docker Desktop
 - Python 3.12
 - Notepad++
 
