@@ -162,6 +162,24 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-r
+      directives:
+        description: Install R
+        allowPrereleases: false
+      settings:
+        id: RProject.R
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: install-rstudio
+      directives:
+        description: Install RStudio
+        allowPrereleases: false
+      settings:
+        id: RStudio.RStudio
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: install-vlc
       directives:
         description: Install VLC media player
