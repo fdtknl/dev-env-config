@@ -13,7 +13,7 @@ Windows must have Winget available. On a new machine, install the Microsoft App 
 From an elevated PowerShell or Command Prompt terminal, run:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$configPath = Join-Path $env:TEMP 'dev-env-config.winget.yaml'; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/FrisoDenijs/dev-env-config/main/dev-env-config.winget.yaml' -OutFile $configPath; winget configure --file $configPath"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$configPath = Join-Path $env:TEMP 'dev-env-config.winget.yaml'; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/fdtknl/dev-env-config/main/dev-env-config.winget.yaml' -OutFile $configPath; winget configure --file $configPath"
 ```
 
 This pulls the Winget configuration directly from GitHub and applies it without requiring you to clone or manually download the file.
