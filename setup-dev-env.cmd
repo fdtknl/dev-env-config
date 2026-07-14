@@ -25,17 +25,11 @@ where code >nul 2>nul
 if %ERRORLEVEL% EQU 0 (
   echo Installing VS Code extensions...
   call code --install-extension ms-python.python
-  call code --install-extension ms-vscode.cpptools
   call code --install-extension ms-azuretools.vscode-containers
   call code --install-extension ms-vscode.vscode-typescript-next
-  call code --install-extension angular.ng-template
 ) else (
   echo VS Code CLI not found. Skipping extension installation.
 )
-
-echo Opening Firefox add-on pages...
-start "" "https://addons.mozilla.org/en-US/firefox/addon/enpass-password-manager/"
-start "" "https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/"
 
 where nvm >nul 2>nul
 if %ERRORLEVEL% EQU 0 (
