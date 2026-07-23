@@ -7,15 +7,6 @@ properties:
   configurationVersion: 0.2.0
   resources:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: install-powershell
-      directives:
-        description: Install PowerShell
-        allowPrereleases: false
-      settings:
-        id: Microsoft.PowerShell
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: install-git
       directives:
         description: Install Git
